@@ -1,0 +1,77 @@
+<component name="libraryTable">
+  <library name="spring-aop-5.3.8">
+    <CLASSES>
+      <root url="jar://E:/javadev/spring-5.3.8-dist/spring-framework-5.3.8/libs/spring-aop-5.3.8.jar!/" />
+      <root url="jar://E:/javadev/spring-5.3.8-dist/spring-framework-5.3.8/libs/spring-beans-5.3.8.jar!/" />
+      <root url="jar://E:/javadev/spring-5.3.8-dist/spring-framework-5.3.8/libs/spring-context-5.3.8.jar!/" />
+      <root url="jar://E:/javadev/spring-5.3.8-dist/spring-framework-5.3.8/libs/spring-expression-5.3.8.jar!/" />
+      <root url="jar://E:/javadev/spring-5.3.8-dist/spring-framework-5.3.8/libs/spring-test-5.3.8.jar!/" />
+      <root url="jar://E:/javadev/spring-5.3.8-dist/spring-framework-5.3.8/libs/spring-web-5.3.8.jar!/" />
+      <root url="jar://E:/javadev/commons-logging-1.1.1.jar!/" />
+      <root url="jar://E:/javadev/spring-5.3.8-dist/spring-framework-5.3.8/libs/spring-core-5.3.8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/javadev/spring-5.3.8-dist/spring-framework-5.3.8/libs/spring-tx-5.3.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/buildSrc/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/integration-tests/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-aop/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-aop/src/testFixtures/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-aop/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-aspects/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-aspects/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-beans/src/jmh/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-beans/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-beans/src/testFixtures/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-beans/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context-indexer/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context-indexer/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context-support/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context-support/src/testFixtures/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context-support/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context/src/jmh/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context/src/testFixtures/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-context/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-core/src/jmh/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-core/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-core/src/testFixtures/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-core/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-expression/src/jmh/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-expression/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-expression/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-instrument/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-jcl/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-jdbc/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-jdbc/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-jms/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-jms/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-messaging/src/jmh/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-messaging/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-messaging/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-orm/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-orm/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-oxm/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-oxm/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-r2dbc/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-r2dbc/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-test/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-test/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-tx/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-tx/src/testFixtures/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-tx/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-web/src/jmh/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-web/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-web/src/testFixtures/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-web/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-webflux/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-webflux/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-webmvc/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-webmvc/src/test/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-websocket/src/main/java" />
+      <root url="jar://E:/javadev/spring-framework-5.3.25.zip!/spring-framework-5.3.25/spring-websocket/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
