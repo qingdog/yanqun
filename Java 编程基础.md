@@ -50,7 +50,7 @@ java -> class ->不同操作系统上的 jvm -> jvm 对应的操作系统
   
   - 写语法糖 -> 执行时解语法糖 -> 无糖代码
   
-    -   语法糖：高级语言中的某种语法，这些语法糖在编译时进行解语法糖，转换为无糖语法。这些语法糖大多都是靠编译器实现，而不是依赖字节码或者虚拟机的底层支持。如自动装箱 Integer i =1;、拆箱。一些"基本功能"是编程语言自身提供的，即语法糖。
+    -   语法糖：高级语言中的某种语法，这些语法糖在编译时进行**解语法糖**，转换为无糖语法。这些语法糖大多都是靠编译器实现，而不是依赖字节码或者虚拟机的底层支持。如自动装箱 Integer i =1;、拆箱。一些"基本功能"是编程语言自身提供的，即语法糖。
   
   - 输出字节码（ 生成 class文件）：代码添加（增加\<init\>等标识代码）；代码转换（**优化**，将字符串变量的拼接转为StringBuilder#append）
   
@@ -338,7 +338,7 @@ private \< 默认 \<protected \< public
 
   -   float add(int num1,int num2);
 
-## 9. 超过 **long** 整型的数据会报错吗
+## 9. 超过 long 整型的数据会报错吗
 
 基本数值类型都有一个表达范围，如果超过这个范围就会有数值溢出的风险。
 
@@ -768,7 +768,7 @@ System.out.println(s1 == s4); //true
 
 `String`是不可变的。
 
-与 `StringBuffer` 都继承自 `AbstractStringBuilder` 类，在 `AbstractStringBuilder` 中也是使用字符数组保存字符串，不过没 有使用 `final` 和 `private` 关键字修饰，最关键的是这个 `AbstractStringBuilder` 类还提供了很多修改字符串的方法比如`append `方 法。
+`StringBuilder` 与 `StringBuffer` 都继承自 `AbstractStringBuilder` 类，在 `AbstractStringBuilder` 中也是使用字符数组保存字符串，不过没 有使用 `final` 和 `private` 关键字修饰，最关键的是这个 `AbstractStringBuilder` 类还提供了很多修改字符串的方法比如`append `方 法。
 
 ```java
 abstract class AbstractStringBuilder implements Appendable,
@@ -789,7 +789,7 @@ abstract class AbstractStringBuilder implements Appendable,
 
 **线程安全性**
 
-`String`中的对象是不可变的，也就可以理解为常量，线程安全。 `StringBuffer `对方法加了同步锁或者对调用的方法加了同步锁，所以是线程 安全的。`StringBuilder `并没有对方法进行加同步锁，所以是非线程安全 的。
+`String`中的对象是不可变的，也就可以理解为常量，线程安全。 `StringBuffer `对方法加了同步锁或者对调用的方法加了同步锁，所以是线程 安全的。`StringBuilder` 并没有对方法进行加同步锁，所以是非线程安全 的。
 
 **性能**
 
@@ -809,7 +809,9 @@ abstract class AbstractStringBuilder implements Appendable,
 
 这个问题有两种情况。 
 
-**情况一：没有 static** 只有 final，没有 static 时，既可以通过=直接赋值，也可以通过构造方法赋值，如下。
+**情况一：没有 static** 
+
+只有 final，没有 static 时，既可以通过=直接赋值，也可以通过构造方法赋值，如下。
 
 a.通过=直接赋值 final int num = 10 ;
 
@@ -832,7 +834,7 @@ public class FinalDemo01 {
 }
 ```
 
-情况二：有 **static** 
+**情况二：有 static** 
 
 static final int num = 10 ; 
 
@@ -847,19 +849,19 @@ public class A{
 
 如果没有 static 修饰：假设在 10 个类中要使用 num 变量，就必须在这 10 个类中先实例化 A 的对象，然后通过"对象.num"来使用 num 变量，因此至少需要 new 10 次。 加上 static 可以节约内存。static是共享变量，因此只会在内存中拥有该变量的一份存储，之后就可以直接通过"类名.变量" 使用（例如"A.num"），而不用先 new 后使用。由于 final修饰的变量不可改变，因此不用考虑并发问题。
 
-## 18. == 和 **equals()**的区别？
+## 18. == 和 equals() 的区别？
 
 == 比较运算符
 
 equals()最初是在 Object 中定义的一个方法。
 
-Object 中定义的 equals()就是 == ，但是 equals() 可以自定义"相等"这个概念。只不过 一般来说 其子类都会重写 equals()方法将其重写为 比较"内容" 是否相等，例如 String。
+Object 中定义的 equals()就是 == ，但是 equals() 可以自定义"相等"这个概念。只不过一般来说 其子类都会重写 equals()方法将其重写为 比较"内容" 是否相等，例如 String。
 
 ==比较的对象的引用地址（内存地址），而一般情况下equals()比较的是内容相等。
 
 ==还可以比较基本的数据类型。
 
-## 19. 举例说明，如何重写 **equals()**方法？
+## 19. 举例说明，如何重写 equals() 方法？
 
 如果 person 对象的 name 和 age 相同，则返回 true；否则返回 false。
 
@@ -873,17 +875,17 @@ public class Person {
         this.age = age;
         this.name = name;
     }
- ...
+	...
     //约定： 如果 name 和 age 相同，则返回 true
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
-//name age
+		//name age
         if(obj instanceof Person){
             Person per = (Person)obj ;
-//用传入的 per，和当前对象 this 比较
+			//用传入的 per，和当前对象 this 比较
             if(this.name.equals(per.getName()) && this.age==pe
             r.getAge() ){
                 return true ;
