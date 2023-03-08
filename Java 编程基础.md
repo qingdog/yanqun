@@ -11,7 +11,7 @@ java 能够跨平台的原因，是因为有各种类型的 jvm（windws jvm ,ma
 
 编译：.java (编译器)-> .class 文件 (JVM)-> 0 1 1 0
 
-**聊聊*"*编译*"***
+**聊聊 "编译"**
 
 C、C++、Java、python 等都属于是高级语言，而非二进制语言。0 1 0 1
 public class Test{} -> 0 1 1 0
@@ -1079,7 +1079,7 @@ Java 正则表达式存在于 java.util.regex 包，主要包括以下两个类�
 实例输出结果为：字符串中是否包含了 \'runoob\' 子字符串? true
 
 正则表达式字符含义参见
-https://www.runoob.com/java/java-regularexpressions.html
+https://www.runoob.com/java/java-regular-expressions.html
 
 **习题**
 
