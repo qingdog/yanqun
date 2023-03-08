@@ -81,13 +81,13 @@ java -> class ->不同操作系统上的 jvm -> jvm 对应的操作系统
 
   - Client 模式下的 C1 编译器：简单优化，耗时短（速度）
 
-## 2. **jvm**、**jre** 和 **jdk** 三者的关系
+## 2. jvm、jre 和 jdk 三者的关系
 
 jvm:java 虚拟机 java virtual machine
 
 jre:java 运行环境，java runtime environment ， jvm + 核心类库:只能运行JAVA 程序，但不能开发 jdk: jre+运行环境工具，java development kit ：既能运行 JAVA 程序，又能开发
 
-**jvm**（识别 **class**）**\<jre**（**jvm+**类库，运行程序）**\<jdk**（**jre+**开发工具集，运行且开发）
+**jvm（识别 class）<jre（jvm+类库，运行程序）<jdk（jre+开发工具集，运行且开发）**
 
 开发人员需要下载并安装 jdk
 jdk 版本说明： jdk 8u192 及以前版本 （免费）
@@ -169,7 +169,7 @@ public class A{
 	public static int num1 ; //成员变量，有默认值 (属于类 ， a.num1 = 10 ;)
 	public int num3 ; // （属于对象 a = 10 ;）
 	
-    public void method(){
+	public void method(){
 		final int num2 = 0; // 局部变量，必须赋初始值
 	}
 }
@@ -274,9 +274,9 @@ m.method() ; // 静态方法也可以通过对象名来调用（不推荐。 静
 ```
 
 **1**、调用方式
-在外部调用静态方法时，可以使用**类名.方法名**的方式，也可以使用**对象.方法名**的方式，而实例方法只有后面这种方式。调用静态方法可以无需创建对象 。
+在外部调用静态方法时，可以使用`类名.方法名`的方式，也可以使用`对象.方法名`的方式，而实例方法只有后面这种方式。**调用静态方法可以无需创建对象 。**
 
-一般不建议使用的方式。
+一般不建议使用 `对象.方法名` 的方式来调用静态方法，建议使用 `类名.方法名` 的方式。
 
 **2**、访问类成员是否存在限制
 
@@ -296,7 +296,7 @@ class Math{
 
 静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态 方法），不允许访问实例成员（即实例成员变量和实例方法），而实例方法不存在这个限制。
 
-## 7. 一个**\".java\"**源文件中是否可以包括多个类？
+## 7. 一个".java"源文件中是否可以包括多个类？
 
 一个.java 文件 可以有多个类，但只能有一个 public 的类，并且 public 的类名必须与文件名相一致。
 
@@ -619,7 +619,7 @@ protected void finalize() throws Throwable { }
 
 
 
-## 12. 一个类的声明能否 既是 **abstract**，又是**final**？如下所示。
+## 12. 一个类的声明能否 既是 abstract，又是final？如下所示。
 
 不能。语义矛盾。
 
@@ -768,7 +768,7 @@ System.out.println(s1 == s4); //true
 
 `String`是不可变的。
 
-`与 StringBuffer` 都继承自 `AbstractStringBuilder` 类，在 `AbstractStringBuilder` 中也是使用字符数组保存字符串，不过没 有使用 `final` 和 `private` 关键字修饰，最关键的是这个 `AbstractStringBuilder` 类还提供了很多修改字符串的方法比如`append `方 法。
+与 `StringBuffer` 都继承自 `AbstractStringBuilder` 类，在 `AbstractStringBuilder` 中也是使用字符数组保存字符串，不过没 有使用 `final` 和 `private` 关键字修饰，最关键的是这个 `AbstractStringBuilder` 类还提供了很多修改字符串的方法比如`append `方 法。
 
 ```java
 abstract class AbstractStringBuilder implements Appendable,
@@ -805,7 +805,7 @@ abstract class AbstractStringBuilder implements Appendable,
 
 3.  多线程操作字符串缓冲区下操作大量数据: 适用`StringBuffer`
 
-## 15. 如何给 **final** 修饰成员变量的初始化赋值？
+## 15. 如何给 final 修饰成员变量的初始化赋值？
 
 这个问题有两种情况。 
 
@@ -838,7 +838,7 @@ static final int num = 10 ;
 
 既有 final，又有 static 时，只能通过=初始化值，不能同构方法赋值。 因为 static 变量是在构造方法之前执行的。
 
-## 16. 为什么对于一个 **public** 及 **final** 修饰的变量，一般建议声明为 static？
+## 16. 为什么对于一个 public 及 final 修饰的变量，一般建议声明为 static？
 ```java
 public class A{
      public final static int num = 10 ;
@@ -894,17 +894,14 @@ public class Person {
 }
 ```
 
-## 20. 重写 **equals** 方法为什么要重写hashcode 方法？
+## 20. 重写 equals 方法为什么要重写hashcode 方法？
 
 Object 类中对 equals()的注释
 
 ```text
-Note that it is generally necessary to override the {@code
-hashCode}
-	* method whenever this method is overridden, so as to
-maintain the
-	* general contract for the {@code hashCode} method, which
-states
+Note that it is generally necessary to override the {@code hashCode}
+	* method whenever this method is overridden, so as to maintain the
+	* general contract for the {@code hashCode} method, which states
 	* that equal objects must have equal hash codes.
 当我们将 equals 方法重写后有必要将 hashCode 方法也重写，这样做才能保证不违
 背 hashCode 方法中“相同对象必须有相同哈希值”的约定
