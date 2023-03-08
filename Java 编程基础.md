@@ -1071,8 +1071,7 @@ Java 正则表达式存在于 java.util.regex 包，主要包括以下两个类�
           String content = "I am javaer from javaerHelloWorld.";
           String pattern = ".*javaer.*";
           boolean isMatch = Pattern.matches(pattern, content);
-          System.out.println("字符串中是否包含了 'runoob' 子字符串? " +
-                  isMatch);
+          System.out.println("字符串中是否包含了 'runoob' 子字符串? " + isMatch);
       }
   }
   ```
@@ -1091,11 +1090,17 @@ https://www.runoob.com/java/java-regularexpressions.html
 ​	输入：
 
 ​		张三 HELLO 5
+
 ​	输出： 
 
-​		张三 H 输入：
+​		张三 H
+
+​	输入：
+
 ​		HELLO 张三 8
+
 ​	输出：
+
 ​		HELLO 张
 
 ```java
@@ -1134,7 +1139,7 @@ public static void main(String[] args) {
     }
 ```
 
-## 23. 说说**&**和**&&**的区别
+## 23. 说说 & 和 && 的区别
 
 &和&&都可以用作逻辑与的运算符，表示逻辑与（and），当运算符两边的表达式的结果都为
 true 时，整个运算结果才为 true，否则，只要有一方为 false，则结果为 false。
@@ -1145,7 +1150,7 @@ If(x==33 & ++y\>0) y 会增长，If(x==33 && ++y\>0)不会增长 &还可以用�
 
 &表示按位与操作，我们通常使用 0x0f 来与一个整数进行&运算，来获取该整数的最低 4 个 bit 位，例如，0x31 & 0x0f 的结果为 0x01。|与\|\|同理。
 
-匿名内部类已在第二次直播课讲解、
+> 24. 匿名内部类已在第二次直播课讲解、
 
 ## 25. 包装类
 
@@ -1162,8 +1167,10 @@ If(x==33 & ++y\>0) y 会增长，If(x==33 && ++y\>0)不会增长 &还可以用�
 | char                                       | Character             |
 
 自动装箱和拆箱：
-	Integer i = 10 ; //自动装箱 ： 包装类 = 基本类型
-	int j = i ;//自动拆箱 ： 基本类型 = 包装类
+
+​	Integer i = 10 ; //自动装箱 ： 包装类 = 基本类型
+
+​	int j = i ;//自动拆箱 ： 基本类型 = 包装类
 
 ```text
 (Integer + int) -> int 类型
@@ -1270,14 +1277,16 @@ float f = 3.14; //错误,3.14 是 double 类型，不会自动转为 float
 
     ​	String name ;
     }
+    
+  - 解析:把类中符号引用，转为直接引用
 
-- 解析:把类中符号引用，转为直接引用
+    前期阶段，还不知道类的具体内存地址，只能使用
 
-  前期阶段，还不知道类的具体内存地址，只能使用
-  "com.yanqun.pojo.Student "来替代 Student 类，
-  "com.yanqun.pojo.Student "就称为符号引用；
+    "com.yanqun.pojo.Student "来替代 Student 类，
 
-  在解析阶段，JVM 就可以将 "com.yanqun.pojo.Student "映射成实际的内存地址，会后就用 内存地址来代替 Student，这种使用 内存地址来使用类的方法 称为直接引用。
+    "com.yanqun.pojo.Student "就称为符号引用；
+
+    在解析阶段，JVM 就可以将 "com.yanqun.pojo.Student "映射成实际的内存地址，会后就用 内存地址来代替 Student，这种使用 内存地址来使用类的方法 称为直接引用。
 
 - 初始化：给 static 变量 赋予正确的值
 
