@@ -8,8 +8,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
 
     public static void main(String[] args)  {
-        ApplicationContext context =  new ClassPathXmlApplicationContext("application.xml");
-        User user = context.getBean("user", User.class);
-        user.add();
+            System.out.println(1/0);
+
+            try {
+                Class.forName("com.yq.entity.User");
+            }catch (ClassNotFoundException e){
+
+            }
     }
 }

@@ -54,7 +54,7 @@ java -> class ->不同操作系统上的 jvm -> jvm 对应的操作系统
   
   - 输出字节码（ 生成 class文件）：代码添加（增加\<init\>等标识代码）；代码转换（**优化**，将字符串变量的拼接转为StringBuilder#append）
   
-    .java -\.class -> 二进制：两种策略
+    .java - .class -> 二进制：两种策略
   
 - 编译后端：将编译前端的产物 Class 文件 -> 二进制文件。但是对于来说，它是不认得字节码的，**每种`cpu`只能读懂自身支持的机器语言 （windows c++ , 可以直接运行 c++） 或者 本地代码（native code）。**
   JVM 需要将 class 翻译 成 **机器码**(二进制) 再执行，**翻译**有两种策略：`解释执行` 和`编译执行（即时编译）` 。
@@ -118,7 +118,7 @@ System.out.println( 3*0.3f );
 
 运算结果 0.90000004 等
 
-float ，int : 32bit（理解） bit ：位 -> 0 1 -\两种可能
+float ，int : 32bit（理解） bit ：位 -> 0 1 - 两种可能
 
 int 的范围 能够容纳下 2 的 32 次方 个数字 ， -2,147,483,648 \~
 +2,147,483,647 整整占满 了 32bit
@@ -209,6 +209,14 @@ public class A{
   class A{ void method(){int a ;} } ,a 在栈中
 
   基本类型在栈中，对象类型在堆中。因为栈属于线程私有的空间，局部变量的生命周期和作用域一般都很短，为了提高 GC 效率，所以没必要放在堆里面（如果在堆中存在，还需要 GC 回收）。
+
+
+
+> class A{ void method(){Object obj = new Object();} }
+>
+> java中所有的对象都是存放在堆(heap)中的，而基本数据类型和引用变量则有可能存放在栈(stack)中的
+>
+> 变量obj是一个Object类型的引用变量，因此它是存放在栈中的，而该引用所指向的对象则是存放在堆中的。在方法method()执行完毕后，变量obj所占用的栈内存将被释放，但是该引用所指向的对象仍然在堆中存在，直到该对象不再被引用，被Java垃圾回收器回收。
 
 ## 5. final, finally, finalize 的区别
 
@@ -1221,6 +1229,8 @@ public static void demo02() {
 答案：NullPointerException
 
 Integer i 的默认值是 null。当执行 i==0 时，等号右侧是数字，因此为了进行比较操作，Integer 会进行自动拆箱（也就是将 Integer 转为 int 类型）。很明显，如果对 null 进行拆箱（将 null 转为数字），就会报NullPointerException。
+
+> 要避免循环中频繁的装箱或拆箱操作
 
 ## 26. 接口和抽象类有什么共同点和区别？
 
